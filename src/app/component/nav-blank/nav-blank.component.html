@@ -1,0 +1,131 @@
+<nav #navBar class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="./assets/images/freshcart-logo.svg">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home" routerLinkActive="active-link" >Home</a>
+        </li>
+
+
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/products" routerLinkActive="active-link" >products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/categories" routerLinkActive="active-link" >categories</a>
+        </li>
+
+        </ul>
+
+
+
+      <ul class="navbar-nav ms-auto  mb-lg-0 d-flex">
+
+        <li class="nav-item">
+          <a class="nav-link active position-relative" routerLink="/cart"  >
+            <i _ngcontent-ng-c4185102220="" class="fas fa-cart-shopping fa-2x text-main"></i>
+            <span class="badge bg-info position-absolute top-0 end-0">{{counterCartData}}</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active position-relative" routerLink="/wishlist"  >
+            <i _ngcontent-ng-c4185102220="" class="fa-solid fa-heart fa-2xl" style="color: #e60505;"></i>
+            <span class="badge bg-info position-absolute top-0 end-0"></span>
+          </a>
+        </li>
+
+
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i  class="fa-solid fa-user fa-2xl text-main"></i>
+                    </a>
+          <ul class="dropdown-menu">
+            <li role="button" routerLink="/forgetPassword" routerLinkActive="active-link">
+              <a  class="dropdown-item" >forgetPassword</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active"  >
+            <i class="fab fa-instagram"></i>
+
+          </a>
+        </li>
+
+          <li>
+            <a class="nav-link active"  >
+              <i class="fab fa-facebook"></i>
+
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link active"  >
+              <i class="fab fa-tiktok"></i>
+
+            </a>
+          </li>
+
+
+          <li>
+            <a class="nav-link active"  >
+            <i class="fab fa-twitter"></i>
+
+          </a>
+        </li>
+
+          <li>
+            <a class="nav-link active"  >
+              <i class="fab fa-linkedin"></i>
+
+            </a>
+          </li>
+
+          <li>
+
+          <a class="nav-link active"  >
+            <i class="fab fa-youtube"></i>
+
+          </a>
+          </li>
+
+
+
+
+          <li>
+
+          <a class="nav-link active cursor-pointer" (click)="logoutUser()"  >
+            SignOut
+
+          </a>
+          </li>
+
+
+
+
+
+
+
+      </ul>
+
+
+    </div>
+  </div>
+</nav>

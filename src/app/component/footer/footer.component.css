@@ -1,0 +1,15 @@
+button{
+  margin-left: 10px;
+  background-color: #0AAD0A;
+ width: 20%;
+  color: aliceblue;
+  font-size: 15px;
+
+}
+section{
+  background-color: #F8F9FA;
+  padding: 50px;
+}
+input{
+  margin-left: 1.25rem;
+}

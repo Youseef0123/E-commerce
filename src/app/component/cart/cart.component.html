@@ -1,0 +1,52 @@
+<section class="bg-main-light my-3 w-75 mx-auto " >
+<div class="p-3 ">
+ <div class="d-flex justify-content-between align-items-center">
+  <div>
+    <h1>Shop Cart</h1>
+  <h3 class="h5 text-main">Total Price: {{allCartItems.totalCartPrice|currency:' EGP '}}</h3>
+
+  </div>
+
+  <div>
+    <button class="btn btn-danger" (click)="clearAllItems()" >
+        Clear All
+    </button>
+  </div>
+ </div>
+
+</div>
+<div class="row  "  *ngFor="let item of allCartItems.products ">
+  <!-- for picture 2rows -->
+   <div class="col-md-2 col-sm-12 imagePadding ">
+      <img [src]="item.product.imageCover" class="w-100 ">
+
+   </div>
+
+   <!-- for product details 10rows -->
+    <div class="col-md-10 d-flex justify-content-between align-items-center">
+      <div>
+        <h3 class="h5">{{item.product.title}}</h3>
+        <h4 class="text-main h5">Price:{{item.price|currency:' EGP '}}</h4>
+        <button class="text-danger btn " (click)="removeSpecificItem(item.product._id)"><i class="fa-regular fa-trash-can p-2 "></i> <span class="bolder">Remove</span></button>
+
+      </div>
+      <!-- counter buttons -->
+      <div class="p-4">
+        <button class="btn border border-success"(click)=" upDatafunction(item.product._id,item.count+1)">+</button>
+        <span class="p-3 h5 fw-bolder">{{item.count}}</span>
+        <button class="btn border border-success"(click)="upDatafunction(item.product._id,item.count-1)">-</button>
+      </div>
+
+    </div>
+
+    <div class="line-sreat">
+      <hr>
+     </div>
+
+
+</div>
+<div>
+  <button class="btn btn-main text-main m-3" [routerLink]='["/payment",allCartItems._id]'  >Online Payment <img src="./assets/images/visa-1.svg" class=""> </button>
+</div>
+
+</section>

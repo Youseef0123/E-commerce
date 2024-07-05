@@ -1,0 +1,23 @@
+<section class="m-3 g-4  justify-content-center">
+  <h1 class="mb-4 text-center">All Categories</h1>
+  <div class="row g-4">
+    <div class="col-md-3" *ngFor="let item of CategoriesData ">
+
+
+
+        <div class="p-2  product cursor-pointer shadow p-2 rounded " >
+
+          <div [routerLink]="['/specificCategory',item._id]  ">
+
+              <img [src]="item.image" class="w-100" height="300px" alt="">
+            <h3 class="h3 text-main hForname  text-center p-2 " >{{item.name}}</h3>
+
+          </div>
+
+        </div>
+
+
+
+    </div>
+  </div>
+ </section>

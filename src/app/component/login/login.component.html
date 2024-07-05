@@ -1,0 +1,29 @@
+<section class="bg-main-light p-4 rounded my-3 w-75 mx-auto">
+  <h1>Login Now</h1>
+  <form [formGroup]="loginform" (ngSubmit)="loginHundler()" >
+    <label for="email" class="email">UserName:</label>
+    <input formControlName="email" #inputemail class="email form-control" name="email" type="email" >
+
+    <div  class="alert alert-danger"  *ngIf="loginform.get('email')?.errors&&(loginform.get('email')?.touched||inputemail.value.length>0)">
+      <p  *ngIf="loginform.get('email')?.getError('required')">The email is required</p>
+      <p  *ngIf="loginform.get('email')?.getError('email')">The email is invalid</p>
+
+    </div>
+
+    <label for="password" class="password">Password:</label>
+    <input formControlName="password" #inputPass name="password" type="password" class="passwird form-control">
+
+    <div class="alert alert-danger" *ngIf="loginform.get('password')?.errors&&(loginform.get('password')?.touched||inputPass.value.length>0)">
+      <p *ngIf="loginform.get('password')?.getError('required')">The password is required</p>
+      <p *ngIf="loginform.get('password')?.getError('pattern')">password must start with UpperCase then from 6 to 10</p>
+    </div>
+
+    <button class="btn-main ms-auto d-block mt-3"> <i class="fas fa-spinner fa-spin" *ngIf="loginSpinner"></i> SignIN</button>
+  </form>
+  <ul class="dropdown-menu">
+    <li role="button" routerLink="/forgetPassword" routerLinkActive="active-link">
+      <a  class="dropdown-item text-dark" >forgetPassword</a>
+    </li>
+
+  </ul>
+</section>

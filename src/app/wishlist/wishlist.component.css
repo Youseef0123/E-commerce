@@ -1,0 +1,13 @@
+.text-wish{
+  font-weight: 900;
+}
+
+
+.love-icon{
+  opacity: 0;
+}
+.product:hover .love-icon{
+  opacity:1;
+  transition: opacity .3s;
+
+}
